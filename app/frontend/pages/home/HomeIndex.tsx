@@ -23,13 +23,10 @@ const HomeIndex = () => {
 
     return (
         <>
-            <h1>Hello World!</h1>
-            <p>Hows it going?</p>
-            <Row>
+            <Row className={"mt-2"}>
                 <Col sm={12}>
                     <Button onClick={loadTasks}>
                         Load Tasks
-                        { loading ? <Spinner className={"ms-1"} animation={"border"} size={'sm'}></Spinner> : null}
                     </Button>
                     <Button onClick={clearTasks} variant={'outline-secondary'} className={'ms-1'}>
                         Clear Tasks
@@ -38,13 +35,18 @@ const HomeIndex = () => {
             </Row>
             <Row className="mt-2">
                 <Col sm={12}>
-                    <ListGroup>
-                        {tasks.map((task, index) => (
-                            <ListGroup.Item key={index}>
-                                {task.title}, {task.description || 'N/A'}
-                            </ListGroup.Item>
-                        ))}
-                    </ListGroup>
+                    {loading ?
+                        (<Spinner className={"ms-1"} animation={"border"} size={'sm'}></Spinner>)
+                        :
+                        (
+                            <ListGroup>
+                                {tasks.map((task, index) => (
+                                    <ListGroup.Item key={index}>
+                                        {task.title}, {task.description || 'N/A'}
+                                    </ListGroup.Item>
+                                ))}
+                            </ListGroup>
+                        )}
                 </Col>
             </Row>
         </>
