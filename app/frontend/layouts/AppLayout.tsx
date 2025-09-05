@@ -4,15 +4,15 @@ import { Outlet, Link as RouterLink } from 'react-router-dom';
 const HomeLayout = () => {
     return (
         <>
-            <Navbar expand="lg" className="bg-body-tertiary">
+            <Navbar sticky={"top"} variant={'dark'} className={'bg-dark'} expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+                    <Navbar.Brand href="#home">zTODO</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
                             <Nav.Link href="#link">Link</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <NavDropdown menuVariant={'dark'} title="Dropdown" id="basic-nav-dropdown" className={'bg-dark'}>
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
