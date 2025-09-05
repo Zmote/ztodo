@@ -24,4 +24,14 @@ export default defineConfig({
             types: resolve(__dirname, 'app/frontend/types'),
         },
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                // Bootstrap causes deprecation warnings with sass new "import" system, apparently this will be
+                // solved in Bootstrap v6, but for now, disable, because annoying
+                quietDeps: true,
+                api: 'modern-compiler'
+            }
+        }
+    }
 })

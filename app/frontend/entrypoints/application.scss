@@ -1,2 +1,7 @@
-/* The following line can be included in a src/application.scss */
-@import 'bootstrap';
+@use 'sass:meta' as meta; // add this
+
+$bootstrap-settings: (
+        //navbar-light-brand-color: red
+);
+
+@include meta.load-css('bootstrap', $with: $bootstrap-settings);

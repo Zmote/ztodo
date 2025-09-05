@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title><%= content_for(:title) || "Ztodo" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,10 +14,10 @@
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%#= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= vite_client_tag %>
     <%= vite_react_refresh_tag %>
-    <%= vite_stylesheet_tag 'application.scss' %>
+    <%= vite_stylesheet_tag 'application.scss'%>
     <%= vite_javascript_tag 'application.tsx' %>
     <%#= vite_typescript_tag 'application', 'data-turbo-track': 'reload', media: 'all' %>
   </head>

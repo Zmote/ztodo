@@ -27,7 +27,9 @@ const HomeLayout = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            <Outlet />
+            <Container>
+                <Outlet />
+            </Container>
         </>
     );
 };
