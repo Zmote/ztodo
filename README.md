@@ -1,4 +1,4 @@
-# README
+# Ztodo
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
@@ -21,4 +21,11 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## Annotations
+
+You can automatically update "schema" changes on corresponding model files via the annotate gem, use:
+
+```
+annotate --models
+```
+

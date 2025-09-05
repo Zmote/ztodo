@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id          :bigint           not null, primary key
+#  title       :string
+#  description :string
+#  due_on      :datetime
+#  duration    :float
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+one:
+  title: MyString
+  description: MyString
+  due_on: 2025-09-05 05:19:33
+  duration: 1.5
+
+two:
+  title: MyString
+  description: MyString
+  due_on: 2025-09-05 05:19:33
+  duration: 1.5
