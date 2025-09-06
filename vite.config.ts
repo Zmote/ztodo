@@ -22,6 +22,7 @@ export default defineConfig({
             pages: resolve(__dirname, 'app/frontend/pages'),
             // images: resolve(__dirname, 'app/frontend/images'),
             types: resolve(__dirname, 'app/frontend/types'),
+            services: resolve(__dirname, 'app/frontend/services'),
         },
     },
     css: {
