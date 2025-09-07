@@ -1,31 +1,61 @@
 # Ztodo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Simple Demo TODO app with Ruby on Rails, Vite, React, TypeScript, Vitest, Playwright.
 
 * Ruby version
-
+  * 3.4.5
 * System dependencies
-
+  * PostgreSQL 13+
+  * Node lts/jod (v22.16.0)
 * Configuration
-
+  * You can provide database user and password via env or .env - File:
+  ```
+  DB_USER=<user>
+  DB_PASS=<pass>
+  ```
 * Database creation
-
-* Database initialization
-
+  ```shell
+  RAILS_ENV=development rake db:create
+  RAILS_ENV=development rake db:migrate
+  ```
+  * Database initialization
+  ```shell
+  # For initial data, also run:
+  RAILS_ENV=development rake db:seed 
+  ```
 * How to run the test suite
-
+  * See section [Testing](#Testing)
 * Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
+  * WIP
 
 ## Testing
+### Backend / Ruby / Rails Tests
+Make sure to migrate the test db first:
 
-# Backend / Ruby / Rails Tests
+```shell
+RAILS_ENV=test rake db:create
+RAILS_ENV=test rake db:migrate
+```
 
-# Frontend Tests
+We are using the builtin minitest support for rails, so to run tests, you can:
+```shell
+rails test
+```
+
+If you want to run specific files or folders, just append them to the command:
+
+```shell
+rails test test/models test/controllers
+```
+
+More info on how to use the command:
+
+```
+rails test --help
+```
+
+### Frontend Tests
 
 Checkout pacakge.json, scripts sections for available run scripts, f.ex.:
 

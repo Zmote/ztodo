@@ -18,18 +18,17 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
-
-development:
-  <<: *default
-  database: ztodo_development
-
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
   username: <%= ENV.fetch("DB_USER") { "ztodo" } %>
   password: <%= ENV.fetch("DB_PASS") { "ztodo" } %>
+
+
+development:
+  <<: *default
+  database: ztodo_development
 
   # The password associated with the PostgreSQL role (username).
   #password:
