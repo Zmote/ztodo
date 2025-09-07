@@ -4,4 +4,5 @@ export interface Task {
     due_on: Date,
     created_on: Date,
     updated_on: Date
+    url: string
 }

@@ -48,7 +48,13 @@ const TasksIndex = () => {
                             <ListGroup>
                                 {tasks.map((task, index) => (
                                     <ListGroup.Item key={index}>
-                                        {task.title}, {task.description || 'N/A'}
+                                        <section>
+                                            <h5 className={"d-inline text-primary"}>{task.title}</h5>
+                                            <Button size={'sm'} variant={'outline-primary'} className="ms-2 float-end" href={task.url}>
+                                                Show
+                                            </Button>
+                                        </section>
+                                        <p className={'mb-0'}>{task.description}</p>
                                     </ListGroup.Item>
                                 ))}
                             </ListGroup>

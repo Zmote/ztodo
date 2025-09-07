@@ -21,6 +21,31 @@ Things you may want to cover:
 
 * Deployment instructions
 
+## Testing
+
+# Backend / Ruby / Rails Tests
+
+# Frontend Tests
+
+Checkout pacakge.json, scripts sections for available run scripts, f.ex.:
+
+```shell
+yarn run test:lib
+yarn run test:unit
+yarn run test:integration
+yarn run test:e2e
+```
+
+All scripts are per default single run, headless. You can use following flags
+to change the behaviour:
+
+```shell
+yarn run test:unit --watch
+# to be able to see the tests in the browser, you have to use --ui with --watch, or
+# the server closes and no data can be shown
+yarn run test:e2e --watch --ui
+```
+
 ## Annotations
 
 You can automatically update "schema" changes on corresponding model files via the annotate gem, use:
@@ -28,4 +53,3 @@ You can automatically update "schema" changes on corresponding model files via t
 ```
 annotate --models
 ```
-
