@@ -117,3 +117,4 @@ test/core/html/
 .vitest-attachments
 explainFiles.txt
 /reports/
+/webdrivers/
