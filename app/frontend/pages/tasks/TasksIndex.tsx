@@ -15,9 +15,11 @@ const TasksIndex = () => {
         setLoading(true);
         TaskService.getTasks().then(tasks => {
             setTasks(tasks);
-        }).catch(error => {
+        }).catch((error: unknown) => {
             console.log(error);
-        }).finally(() => (setLoading(false)));
+        }).finally(() => {
+            setLoading(false)
+        });
     }
 
     useEffect(() => {
@@ -46,11 +48,12 @@ const TasksIndex = () => {
                         :
                         (
                             <ListGroup>
-                                {tasks.map((task, index) => (
-                                    <ListGroup.Item key={index}>
+                                {tasks.map((task) => (
+                                    <ListGroup.Item key={task.id}>
                                         <section>
                                             <h5 className={"d-inline text-primary"}>{task.title}</h5>
-                                            <Button size={'sm'} variant={'outline-primary'} className="ms-2 float-end" href={task.url}>
+                                            <Button size={'sm'} variant={'outline-primary'} className="ms-2 float-end"
+                                                    href={task.url}>
                                                 Show
                                             </Button>
                                         </section>

@@ -6,7 +6,6 @@ import '../App.scss'
 
 import App from '../App';
 
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const rootElement = document.getElementById('root')!;
 const root = createRoot(rootElement);
 

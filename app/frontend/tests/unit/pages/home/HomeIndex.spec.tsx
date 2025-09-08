@@ -4,7 +4,7 @@ import HomeIndex from 'pages/home/HomeIndex'
 
 
 describe('HomeIndex', () => {
-    it('renders Home', async () => {
+    it('renders Home', () => {
         const { getByText } = render(<HomeIndex />);
 
         expect(getByText('Hello to zTODO')).toBeInTheDocument();
