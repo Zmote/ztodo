@@ -85,7 +85,8 @@ annotate --models
 ```
 
 ## TODOs
-
+- [ ] Setup Swagger for API documentation
+- [ ] Implement Auth / Authorization
 - [ ] Reenable Github Actions with
   - [ ] Eslint
   - [ ] Frontend tests
