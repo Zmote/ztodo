@@ -83,3 +83,22 @@ You can automatically update "schema" changes on corresponding model files via t
 ```
 annotate --models
 ```
+
+## TODOs
+
+- [ ] Reenable Github Actions with
+  - [ ] Eslint
+  - [ ] Frontend tests
+  - [ ] Backend tests
+  - [ ] Auto-Deploy on pass (on Google Cloud)
+- [ ] Testing
+  - [ ] Write more backend / frontend tests
+  - [ ] Configure Playwright + Capybara to save Screenshots / Clips on fails
+  - [ ] Use Spec DSL for Minitest
+- [ ] Add Firebase as an additional DB (default PostgreSQL)
+- [ ] Enable other "default" systems, (f.ex. SolidQueue)
+- [ ] Add simple chatting capability (ActionCable)
+- [ ] Add notifications
+- [ ] Add metrics tracking
+- [ ] Refine containerization setup
+- [ ] Configure kamal (or checkout Vagrant)
