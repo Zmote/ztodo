@@ -2,6 +2,8 @@ import {Button, Col, Form, InputGroup, ListGroup, Row, Spinner} from "react-boot
 import {useEffect, useState} from "react";
 import {Task} from "types/tasks";
 import {TaskService} from 'services/tasks'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faTrash, faEye} from '@fortawesome/free-solid-svg-icons'
 import ClockWidget from "components/clock/ClockWidget";
 import CalendarWidget from "components/calendar/CalendarWidget";
 import TaskSidebar from "./TaskSidebar";
@@ -38,7 +40,7 @@ const TasksIndex = () => {
                 <Col sm={3}>
                     <ClockWidget></ClockWidget>
                     <hr/>
-                    <CalendarWidget />
+                    <CalendarWidget/>
                 </Col>
                 <Col sm={6}>
                     <Row>
@@ -68,11 +70,12 @@ const TasksIndex = () => {
                                                     <h5 className={"d-inline text-primary"}>{task.title}</h5>
                                                     <Button size={'sm'} variant={'danger'} className="ms-1 float-end"
                                                             href={task.url}>
-                                                        Delete
+                                                        <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                                                     </Button>
-                                                    <Button size={'sm'} variant={'outline-primary'} className="float-end"
+                                                    <Button size={'sm'} variant={'outline-primary'}
+                                                            className="float-end"
                                                             href={task.url}>
-                                                        Show
+                                                        <FontAwesomeIcon icon={faEye}></FontAwesomeIcon>
                                                     </Button>
                                                 </section>
                                                 <p className={'mb-0'}>{task.description}</p>
